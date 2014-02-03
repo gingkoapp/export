@@ -1,0 +1,15 @@
+{
+  "name": "gingko-export",
+  "description": "Export gingko tree",
+  "dependencies": {
+    "jashkenas/underscore": "*",
+    "gingkoapp/marked": "*"
+  },
+  "main": "lib/index.js",
+  "scripts": [
+    "lib/index.js"
+  ],
+  "remotes": [
+    "https://gingko-worker:bd088c8b5bd741370b320fcc@raw.github.com"
+  ]
+}
