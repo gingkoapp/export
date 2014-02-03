@@ -5,6 +5,9 @@
     "jashkenas/underscore": "*",
     "gingkoapp/marked": "*"
   },
+  "development": {
+    "chaijs/chai": "*"
+  },
   "main": "lib/index.js",
   "scripts": [
     "lib/index.js"
