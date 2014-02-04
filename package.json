@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "repository": "git://github.com:gingkoapp/export.git",
   "description": "Export gingko tree",
-  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha && component-testem",
+    "test": "mocha test.js && component-testem",
     "stat": "cloc lib/ --quiet --by-file && cloc test/*.js --quiet --by-file"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ describe('export', function() {
   var result, cards, gingkoExport;
 
   try {
-    gingkoExport = require('../lib');
+    gingkoExport = require('./');
   } catch (err) {
     gingkoExport = require('gingko-export');
   }

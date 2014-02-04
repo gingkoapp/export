@@ -15,7 +15,7 @@ console.log(html); // cards in html format
 
 ## API
 
-### gingkoExport(cards, options, markedOptions)
+### gingkoExport(cards, options, [markedOptions])
 
   `cards` is an array ob objects.
   Available `options`:
@@ -28,3 +28,8 @@ console.log(html); // cards in html format
 
   Use `markedOptions` to pass specific options
   for [marked](https://github.com/gingkoapp/marked).
+
+## TODO
+
+  - should have .use concept
+  - sort and filter are tasks for different modules.
