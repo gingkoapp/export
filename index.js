@@ -28,8 +28,35 @@ function gingkoExport(cards, ops, markedOps) {
     case 'txt': return toTxt(cards, ops);
     case 'html': return marked(toTxt(cards, ops), markedOps);
     case 'impress': return toImpress(cards, ops, markedOps);
+    case 'json': return toJSON(cards, ops);
     default: throw new TypeError(ops.format + ' format is not supported');
   }
+}
+
+/**
+ * Export to gingko json.
+ *
+ * @param {Array} cards
+ * @param {Object} ops
+ * @return {Array}
+ */
+
+function toJSON(cards, ops) {
+  var data = sortCards(cards, ops);
+  var groups = _.groupBy(data, 'parentId');
+
+  // transform sorted array to content/children structure
+  function sortGroup(siblings) {
+    return siblings.map(function(card) {
+      var item = { content: card.content };
+      if (groups[card._id]) {
+        item.children = sortGroup(groups[card._id]);
+      }
+      return item;
+    });
+  }
+
+  return data.length ? sortGroup(groups[data[0].parentId]) : [];
 }
 
 /**

@@ -46,6 +46,26 @@ describe('export', function() {
     expect(result).contain('<div class="step"><h3 id="professional-javascript">Professional Javascript');
   });
 
+  it('to json', function() {
+    result = gingkoExport(cards, { format: 'json', column: 1 });
+    expect(result).eql([
+      { content: '# Async Javascript' },
+      { content: '# Node.js in action' }
+    ]);
+
+    result = gingkoExport(cards, { format: 'json', cardId: 3 });
+    expect(result).eql([{
+      content: '## Javascript Web Applications',
+      children: [
+        { content: '### Javascript. The Good Parts' },
+        { content: '### Javascript Patterns' }
+      ]
+    }]);
+
+    result = gingkoExport(cards, { format: 'json', column: 4 });
+    expect(result).eql([]);
+  });
+
   it('filter by `column`', function() {
     result = gingkoExport(cards, { format: 'txt', column: 3 });
     expect(result.split('\n\n')).eql(['### Javascript. The Good Parts',
