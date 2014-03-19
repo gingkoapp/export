@@ -105,6 +105,7 @@ function sortCards(cards, ops) {
 
   function sortGroup(siblings, column) {
     _.sortBy(siblings, 'position').map(function(card) {
+      if (card.deleted) return;
       if (!ops.column || column === ops.column) result.push(card);
       if (groups[card._id]) sortGroup(groups[card._id], column + 1);
     });

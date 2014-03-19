@@ -16,6 +16,8 @@ describe('export', function() {
       { _id: 5, content: '### Javascript. The Good Parts', position: 1, parentId: 3 },
       { _id: 6, content: '### Javascript Patterns',        position: 2, parentId: 3 },
       { _id: 4, content: '## jQuery in Action',            position: 2, parentId: 1 },
+      { _id: 9, content: '## Deleted book',                position: 3, parentId: 1, deleted: true },
+      { _id: 0, content: '### Unhappy child',              position: 1, parentId: 9 },
       { _id: 7, content: '### Professional Javascript',    position: 1, parentId: 4 },
       { _id: 2, content: '# Node.js in action',            position: 2, parentId: null },
       { _id: 8, content: '## Web Performance Daybook',     position: 1, parentId: 2 },
@@ -32,7 +34,7 @@ describe('export', function() {
   it('to text', function() {
     result = gingkoExport(cards, { format: 'txt' }).split('\n\n');
     expect(result[0]).equal('# Async Javascript');
-    expect(result).length(cards.length);
+    expect(result).length(cards.length - 2);
   });
 
   it('to html', function() {
