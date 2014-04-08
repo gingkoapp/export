@@ -1,3 +1,9 @@
+### 0.3.1 / 2014-04-08
+
+  * support component@1.0
+  * package: use npm link instead of manual deps to marked
+  * package: component-testem@0.9
+
 ## 0.3.0 / 2014-03-19
 
   * ignores archived cards

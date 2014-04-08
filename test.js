@@ -1,7 +1,8 @@
+var _ = require('underscore');
+var expect = require('chai').expect;
+var gingkoExport = require('./index');
+
 describe('export', function() {
-  var _ = require('underscore');
-  var expect = require('chai').expect;
-  var gingkoExport = require('./index');
   var result, cards;
 
   beforeEach(function() {

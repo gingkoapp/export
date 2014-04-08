@@ -1,11 +1,11 @@
 {
   "name": "gingko-export",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": "git://github.com:gingkoapp/export.git",
   "description": "Export gingko tree",
   "scripts": {
-    "postinstall": "npm link ../marked && component link ../marked && component install --dev",
-    "test": "mocha test.js && component-testem",
+    "postinstall": "npm link ../marked && npm link ../component-testem && component link ../marked && component install --dev",
+    "test": "mocha && component-testem",
     "stat": "cloc lib/ --quiet --by-file && cloc test/*.js --quiet --by-file"
   },
   "dependencies": {
