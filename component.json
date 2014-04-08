@@ -2,18 +2,16 @@
   "name": "gingko-export",
   "description": "Export gingko tree",
   "version": "0.3.0",
-  "repo": "gingkoapp/export",
+  "repository": "gingkoapp/export",
   "dependencies": {
-    "jashkenas/underscore": "*",
-    "gingkoapp/marked": "*"
+    "jashkenas/underscore": "1.6.0",
+    "gingkoapp/marked": "0.2.10-12"
   },
   "development": {
-    "chaijs/chai": "*"
+    "dependencies": {
+      "chaijs/chai": "*"
+    },
+    "scripts": ["test.js"]
   },
-  "scripts": [
-    "index.js"
-  ],
-  "remotes": [
-    "https://gingko-worker:bd088c8b5bd741370b320fcc@raw.github.com"
-  ]
+  "scripts": ["index.js"]
 }

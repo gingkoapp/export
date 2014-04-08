@@ -4,16 +4,16 @@
   "repository": "git://github.com:gingkoapp/export.git",
   "description": "Export gingko tree",
   "scripts": {
+    "postinstall": "npm link ../marked && component link ../marked && component install --dev",
     "test": "mocha test.js && component-testem",
     "stat": "cloc lib/ --quiet --by-file && cloc test/*.js --quiet --by-file"
   },
   "dependencies": {
-    "underscore": "~1.6.0",
-    "marked": "git+ssh://git@github.com/gingkoapp/marked#0.2.10-10"
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "chai": "~1.9.0",
-    "component-testem": "~0.6.2"
+    "mocha": "*",
+    "chai": "*",
+    "component": "1.0.0-rc5"
   }
 }

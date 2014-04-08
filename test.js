@@ -1,13 +1,8 @@
 describe('export', function() {
   var _ = require('underscore');
   var expect = require('chai').expect;
-  var result, cards, gingkoExport;
-
-  try {
-    gingkoExport = require('./');
-  } catch (err) {
-    gingkoExport = require('gingko-export');
-  }
+  var gingkoExport = require('./index');
+  var result, cards;
 
   beforeEach(function() {
     cards = _.shuffle([
