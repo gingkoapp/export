@@ -1,3 +1,7 @@
+### 0.3.2 / 2014-05-23
+
+  * upgrade marked
+
 ### 0.3.1 / 2014-04-08
 
   * support component@1.0
