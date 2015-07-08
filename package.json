@@ -1,6 +1,6 @@
 {
   "name": "gingko-export",
-  "version": "0.3.1",
+  "version": "0.3.4",
   "repository": "git://github.com:gingkoapp/export.git",
   "description": "Export gingko tree",
   "scripts": {
