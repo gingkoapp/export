@@ -68,8 +68,11 @@ function toJSON(cards, ops) {
  */
 
 function toTxt(cards, ops) {
+  var start = ops.start ? ops.start : "";
+  var end = ops.end ? ops.end : "";
+
   return sortCards(cards, ops)
-    .map(function(card) { return card.content })
+    .map(function(card) { return start + card.content + end})
     .join('\n\n');
 }
 
