@@ -70,10 +70,14 @@ function toJSON(cards, ops) {
 function toTxt(cards, ops) {
   var start = ops.start ? ops.start : "";
   var end = ops.end ? ops.end : "";
+  var join = "\n\n";
+  if (!isNaN(parseInt(ops.newlines))) {
+    join = Array(parseInt(ops.newlines)+1).join('\n');
+  }
 
   return sortCards(cards, ops)
     .map(function(card) { return start + card.content + end})
-    .join('\n\n');
+    .join(join);
 }
 
 /**
