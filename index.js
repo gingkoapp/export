@@ -26,7 +26,7 @@ function gingkoExport(cards, ops, markedOps) {
 
   switch (ops.format) {
     case 'txt': return toTxt(cards, ops);
-    case 'html': return marked(toTxt(cards, ops), markedOps);
+    case 'html': return toHTML(cards, ops, markedOps);
     case 'impress': return toImpress(cards, ops, markedOps);
     case 'json': return toJSON(cards, ops);
     default: throw new TypeError(ops.format + ' format is not supported');
@@ -77,6 +77,28 @@ function toTxt(cards, ops) {
 
   return sortCards(cards, ops)
     .map(function(card) { return start + card.content + end})
+    .join(join);
+}
+
+/**
+ * Export to Html with pre/append
+ *
+ * @param {Array} cards
+ * @param {Object} ops
+ * @param {Object} markedOps
+ * @return {String}
+ */
+
+function toHTML(cards, ops, markedOps) {
+  var start = ops.start ? ops.start : "";
+  var end = ops.end ? ops.end : "";
+  var join = "\n\n";
+  if (!isNaN(parseInt(ops.newlines))) {
+    join = Array(parseInt(ops.newlines)+1).join('\n');
+  }
+
+  return sortCards(cards, ops)
+    .map(function(card) { return start + marked(card.content, markedOps) + end})
     .join(join);
 }
 
