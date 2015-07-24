@@ -5,7 +5,7 @@
   "repository": "gingkoapp/export",
   "dependencies": {
     "jashkenas/underscore": "1.6.0",
-    "gingkoapp/marked": "0.2.10-19"
+    "gingkoapp/marked": "0.2.10-20"
   },
   "development": {
     "dependencies": {

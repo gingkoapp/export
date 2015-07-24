@@ -8,7 +8,7 @@
     "stat": "cloc lib/ --quiet --by-file && cloc test/*.js --quiet --by-file"
   },
   "dependencies": {
-    "marked": "git+ssh://git@github.com/gingkoapp/marked#0.2.10-19",
+    "marked": "git+ssh://git@github.com/gingkoapp/marked#0.2.10-20",
     "underscore": "~1.6.0"
   },
   "devDependencies": {
