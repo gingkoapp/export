@@ -1,11 +1,11 @@
 {
   "name": "gingko-export",
   "description": "Export gingko tree",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "repository": "gingkoapp/export",
   "dependencies": {
     "jashkenas/underscore": "1.6.0",
-    "gingkoapp/marked": "0.2.10-18"
+    "gingkoapp/marked": "0.2.10-19"
   },
   "development": {
     "dependencies": {

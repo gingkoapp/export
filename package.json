@@ -1,6 +1,6 @@
 {
   "name": "gingko-export",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "repository": "git://github.com:gingkoapp/export.git",
   "description": "Export gingko tree",
   "scripts": {
@@ -8,7 +8,7 @@
     "stat": "cloc lib/ --quiet --by-file && cloc test/*.js --quiet --by-file"
   },
   "dependencies": {
-    "marked": "git+ssh://git@github.com/gingkoapp/marked#0.2.10-18",
+    "marked": "git+ssh://git@github.com/gingkoapp/marked#0.2.10-19",
     "underscore": "~1.6.0"
   },
   "devDependencies": {
